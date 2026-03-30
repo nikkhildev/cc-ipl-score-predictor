@@ -16,6 +16,15 @@ Generate 10 realistic predicted scores for each team in today's IPL match, based
 - User asks "what's today's IPL match" with prediction intent
 - User runs `/ipl-score-predictor`
 
+## Prerequisite Check
+
+**Before doing anything**, verify that `WebSearch` or `mcp__tavily__tavily-search` is available as a tool. This skill requires live web search to fetch match schedules, pitch reports, and team data.
+
+If neither is available, STOP and respond:
+> "This skill requires web search capability. Please ensure WebSearch is enabled in Claude Code, or configure the Tavily MCP server. Without web search, I cannot fetch live IPL match data."
+
+Do NOT proceed with the workflow below without web search.
+
 ## Workflow
 
 ### Step 1: Find Today's Match
